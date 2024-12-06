@@ -19,7 +19,6 @@ class LeaveTest extends TestCase
             'end_date' => now()->addDays(3)->toDateString(),
         ]);
 
-        $response->assertStatus(201)
-                 ->assertJson(['status' => 'Pending']);
+        $response->assertStatus(201)->assertJson(['status' => 'Pending']);
     }
 }
